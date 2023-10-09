@@ -24,7 +24,7 @@ module Api
       }
 
       render json: response.to_json
-      end
+    end
 
     def create
       score = current_user.scores.build(score_params)
