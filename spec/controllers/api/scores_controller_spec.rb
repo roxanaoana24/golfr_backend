@@ -18,6 +18,7 @@ describe Api::ScoresController, type: :request do
       expect(response).to have_http_status(:ok)
       response_hash = JSON.parse(response.body)
       scores = response_hash['scores']
+      
       expect(scores.size).to eq 3
       expect(scores[0]['user_name']).to eq 'User2'
       expect(scores[0]['total_score']).to eq 99
